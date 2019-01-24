@@ -12,6 +12,9 @@ Reconstruction of the test set images:
 Interpolation between 2 images:
 ![interpolate](imgs/interpolate.png)
 
+Randomly generates image and add "blonde vector":  
+![attr](imgs/attr.png)
+
 ## Reference
 1. [Autoencoding beyond pixels using a learned similarity metric](https://arxiv.org/abs/1512.09300)
 1. https://github.com/zhangqianhui/vae-gan-tensorflow
