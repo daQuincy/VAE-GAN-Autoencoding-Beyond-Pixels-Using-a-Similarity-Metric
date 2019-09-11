@@ -17,17 +17,13 @@ files = glob.glob("img_align_celeba/*")
 
 imgs = []
 aar = AspectAwareResize(64, 64)
-count = 0
+
 for file in files:
     f_name = os.path.split(file)[-1]
     print("[INFO] Processing {}".format(f_name))
     img = cv2.imread(file)
     img = aar.preprocess(img)
     imgs.append(img)
-    
-    count += 1
-    if count == 50:
-        break
     
 imgs = np.stack(imgs)
 X_train, X_test = train_test_split(imgs, test_size=200)
