@@ -286,8 +286,9 @@ def train_gan_stuff(model):
 
 def batch_generator(data):
     while True:
+        n_batch = len(data) // config.batch_size
         idxs = np.random.permutation(len(data))
-        for i in range(0, len(data)):
+        for i in range(n_batch):
             up = i*config.batch_size
             down = int((i*config.batch_size) + config.batch_size)
             x = data[idxs[up:down]]
